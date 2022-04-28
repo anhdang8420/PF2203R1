@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        html, body{
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            color: white;
+            padding-top: 5%;
+            padding-bottom: 5%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div style="width:  80%; height: 90%; margin: auto; background-color: cadetblue;">
+        <h2>Cấu trúc if .. else</h2>
+        <p>A time-based greeting:</p>
+        <p id="demo"></p>
+        <script>
+            const time = new Date().getHours();
+            let greeting;
+            if (time < 10) {
+                greeting = "Good morning";
+            } else if (time < 20) {
+                greeting = "Good day";
+            } else {
+                greeting = "Good evening";
+            }
+            document.getElementById("demo").innerHTML = greeting;
+        </script>
+    </div>
+    
+
+</body>
+
+</html>
