@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính lãi suất đơn</title>
+</head>
+
+<body>
+    <script>
+        let inputMonkey = prompt('Số tiền: ');
+        let money = parseFloat(inputMonkey);
+        let inputR = prompt('Nhập lãi suất: ');
+        let r = parseFloat(inputR);
+        let inputN = prompt('Nhập số năm: ');
+        let n = parseInt(inputN);
+
+        let lai = money * r / 100;
+        let total = money + lai;
+
+
+        document.write("Số tiền ban đầu: " + money + "<br>");
+        document.write("Lãi suất: "+ r +"% <br>");
+        document.write("Số năm: "+ n +"<br>");
+        document.write("Số tiền lãi của " + n + " năm: " + lai +"<br>");
+        document.write("Số tiền cả gốc và lãi sau " + n + " năm: " + total);
+    </script>
+</body>
+
+</html>
