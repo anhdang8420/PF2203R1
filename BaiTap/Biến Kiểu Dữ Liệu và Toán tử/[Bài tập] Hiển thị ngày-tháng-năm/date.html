@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chương trình nhập và hiển thị ngày-tháng-năm</title>
+</head>
+<body>
+    <script>
+        do{
+            inputDate = prompt('Nhập ngày: ');
+            d = parseInt(inputDate);
+        }
+        while(d>=0 || d>=31)
+
+        do{
+            inputMonth = prompt('Nhập tháng: ');
+            m = parseInt(inputMonth);
+        }
+        while(m>=0 || m>=12)
+        
+        inputYear = prompt('Nhập năm: ');
+        y =parseInt(inputYear);
+
+        document.write( "Ngày : " + d + " - " + m + " - " + y );
+    </script>
+</body>
+</html>
