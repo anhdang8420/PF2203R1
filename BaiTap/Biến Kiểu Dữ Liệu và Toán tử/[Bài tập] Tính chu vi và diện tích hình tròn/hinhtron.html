@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính chu vi và diện tích hình tròn</title>
+</head>
+<body>
+    <script>
+        let inputR = prompt('Nhập bán kính đường tròn: ');
+        let R = parseFloat(inputR);
+        let D = R*2;
+        let P = 2*Math.PI*R;
+        let S = Math.PI * Math.pow(R,2);
+
+        document.write('Bán kính: ' + R);
+        document.write("<br>");
+        document.write('Đường kính: ' + D);
+        document.write("<br>");
+        document.write('Chu vi: ' + P);
+        document.write("<br>");
+        document.write('Diện tích: ' + S);
+    </script>
+</body>
+</html>
