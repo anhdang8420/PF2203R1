@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input" value="abc">
+    <button onclick="test()" id="button">Test</button>
+</body>
+<script>
+    function test() {
+        //sử dụng id lấy giá trị
+        let input = document.getElementById("input")
+        let a = input.value
+        let but = document.getElementById("button")
+        but.style.color = "red"
+        console.log(a);
+    }
+</script>
+</html>

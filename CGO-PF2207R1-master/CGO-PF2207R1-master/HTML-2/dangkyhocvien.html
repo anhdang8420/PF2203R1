@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 550px;
+            background-color: rgb(248, 248, 160);
+            padding: 5px;
+        }
+
+        #title {
+            color: blue;
+            background-color: aqua;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 3px;
+        }
+
+        label {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td id="title" colspan="2">ĐĂNG KÝ HỌC VIÊN</td>
+            </tr>
+            <tr>
+                <td><label for="name">Họ và tên</label></td>
+                <td><input type="text" name="name" id="name" size="35"></td>
+            </tr>
+            <tr>
+                <td><label for="dob">Ngày sinh</label></td>
+                <td><input type="text" name="dob" id="dob" size="18"></td>
+            </tr>
+            <tr>
+                <td><label>Giới tính</label></td>
+                <td>
+                    <input type="radio" name="gender"> Nam
+                    <input type="radio" name="gender"> Nữ
+                </td>
+            </tr>
+            <tr>
+                <td><label for="address">Địa chỉ</label></td>
+                <td>
+                    <textarea name="address" id="address" cols="27" rows="5"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="classes">Lớp</label></td>
+                <td>
+                    <select name="classes" id="classes">
+                        <option value="">---Chọn lớp---</option>
+                        <option value="6">Lớp 6</option>
+                        <option value="7">Lớp 7</option>
+                        <option value="8">Lớp 8</option>
+                        <option value="9">Lớp 9</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td><input type="text" name="email" id="email" size="22"></td>
+            </tr>
+            <tr>
+                <td><label for="phone">Điện thoại</label></td>
+                <td><input type="text" name="phone" id="phone" size="22"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit">Đăng ký</button>
+                    <button type="reset">Nhập lại</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

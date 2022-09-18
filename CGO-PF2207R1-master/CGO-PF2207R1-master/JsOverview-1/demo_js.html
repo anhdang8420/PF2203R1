@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- sử dụng trực tiếp trong thẻ: inline -->
+    <p onclick="alert('HelloWorld')">ClickMe</p>
+    <input type="text" id="nhap">
+    <button onclick="demo()">Click</button>
+    <button onclick="demo1()">Click1</button>
+    <button onclick="demo2()">Click2</button>
+    <button onclick="demo3()">Click3</button>
+    <button onclick="demo4()">Click4</button>
+    <div id="result1"></div>
+    <div id="result2"></div>
+</body>
+<!-- sử dụng internal -->
+<script>
+    // alert("HelloWorld")
+    // nhập liệu bằng prompt()
+    // let string = prompt("Nhập gì đó vào đây")
+    // nhập liệu bằng id
+    function demo() {
+        let string1 = document.getElementById("nhap").value
+        // hiển thị giá trị bằng console.log()
+        console.log(string1);
+    }
+
+    function demo1() {
+        let string1 = document.getElementById("nhap").value
+        // hiển thị giá trị bằng alert()
+        alert(string1);
+    }
+
+    function demo2() {
+        let string1 = document.getElementById("nhap").value
+        // hiển thị giá trị bằng confirm()
+        let check = confirm(string1);
+        console.log(check)
+    }
+
+    function demo3() {
+        let string1 = document.getElementById("nhap").value
+        // hiển thị giá trị bằng document.write()
+        document.write(string1)
+    }
+
+    function demo4() {
+        let string1 = document.getElementById("nhap").value
+        // hiển thị giá trị bằng document.getElementById("id")
+        document.getElementById("result1").innerText = "<h1>" + string1 + "</h1>"
+        document.getElementById("result2").innerHTML = "<h1>" + string1 + "</h1>"
+    }
+
+    function demo5() {
+        alert("HelloWorld")
+    }
+</script>
+<!-- sử dụng external -->
+<script src="demo.js"></script>
+</html>

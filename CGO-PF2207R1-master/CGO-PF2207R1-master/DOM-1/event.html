@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="button" onclick="onClick()">ClickMe</button>
+    <p onclick="onClick()">CodeGym</p>
+    <img onmouseover="onMouseOver()" onmouseout="onMouseOut()"
+    onclick="onClick()" width="200px" height="200px" 
+    src="https://didongviet.vn/dchannel/wp-content/uploads/2022/01/cute-didongviet.jpg" alt="">
+
+    
+</body>
+<script>
+    //sự kiện click chuột: tác động trên mọi thẻ HTML
+    function onClick() {
+        alert("HelloWorld")
+        document.getElementById("button").style.color = "black"
+    }
+
+    //sự kiện chuột: onmouseover và onmouout
+    function onMouseOver() {
+        document.getElementById("button").style.color = "red"
+    }
+
+    function onMouseOut() {
+        document.getElementById("button").style.color = "blue"
+    }
+</script>
+</html>

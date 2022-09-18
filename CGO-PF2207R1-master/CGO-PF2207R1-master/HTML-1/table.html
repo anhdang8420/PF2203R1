@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="demo.css">
+    <!-- thẻ chứa CSS -->
+    <!-- <style>
+        /* table {
+            background-color: aqua;
+        } */
+        
+        .black {
+            background-color: black;
+        }
+
+        #table1 {
+            width: 400px;
+            height: 300px;
+            background-color: aqua;
+        }
+
+        #table2 {
+            width: 600px;
+            height: 400px;
+            background-color: red;
+        }
+
+        table, tr, th, td {
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+    </style> -->
+</head>
+<body>
+    <table id="table1">
+        <tr>
+            <th>Tên</th>
+            <th colspan="2">Tuổi</th>
+            <!-- <th>Quê</th> -->
+        </tr>
+        <tr>
+            <td rowspan="2">Quân</td>
+            <td class="black">27</td>
+            <td>HB</td>
+        </tr>
+        <tr>
+            <!-- <td>Quân</td> -->
+            <td class="black">27</td>
+            <td>HB</td>
+        </tr>
+    </table>
+    <table id="table2">
+        <tr>
+            <th>Tên</th>
+            <th style="background-color: white;" colspan="2">Tuổi</th>
+            <!-- <th>Quê</th> -->
+        </tr>
+        <tr>
+            <td rowspan="2">Quân</td>
+            <td>27</td>
+            <td>HB</td>
+        </tr>
+        <tr>
+            <!-- <td>Quân</td> -->
+            <td>27</td>
+            <td>HB</td>
+        </tr>
+    </table>
+</body>
+</html>

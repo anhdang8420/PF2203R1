@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div">
+        <button id="b1">Test</button>
+        <button id="b2">Test</button>
+    </div>
+</body>
+<script>
+    let a = document.querySelector("body")
+    let i = document.createElement("input")
+    i.setAttribute("value", "test")
+    let b = document.createElement("button")
+    b.innerHTML = "ClickMe"
+    a.appendChild(i)
+    a.appendChild(b)
+
+    let demo = document.getElementById("div")
+    let demo1 = document.getElementById("b1")
+    console.log(demo.firstElementChild);
+    console.log(demo.lastElementChild);
+    console.log(demo.nextElementSibling);
+    console.log(demo1.nextElementSibling);
+</script>
+</html>

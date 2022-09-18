@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Điểm Toán: <input type="text" id="math"></label><br>
+    <label>Điểm Văn: <input type="text" id="lit"></label><br>
+    <label>Điểm Anh: <input type="text" id="eng"></label><br>
+    <label>Khu vực: <select id="area" style="width: 100px">
+        <option value="0.75">KV1</option>
+        <option value="0.5">KV2-NT</option>
+        <option value="0.25">KV2</option>
+        <option value="0">KV3</option>
+    </select></label><br>
+    <button onclick="calPoint()">Tính điểm</button>
+    <h2 style="color: red;" id="result"></h2>
+</body>
+<script>
+    function calPoint() {
+        let math = +document.getElementById("math").value 
+        let lit = +document.getElementById("lit").value 
+        let eng = +document.getElementById("eng").value 
+        let area = +document.getElementById("area").value 
+        document.getElementById("result").innerHTML = "Tổng điểm DDH khối D của bạn là: " + (math + lit + eng + area)
+    }
+</script>
+</html>

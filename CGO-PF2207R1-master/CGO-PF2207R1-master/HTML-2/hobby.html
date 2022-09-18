@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            width: 520px;
+            height: 235px;
+            background-color: aqua;
+            margin: auto;
+            /* bỏ đoạnc nếu dùng padding 4 chỉ số */
+            border: 5px solid aqua;
+            padding-left: 10px; 
+            /* bỏ nếu này dùng padding 4 chỉ số */
+            /* padding: 5px 7px 5px 15px; */
+        }
+        table {
+            width: 500px;
+            height: 220px;
+            background-color: white;
+            /* bỏ nếu này dùng padding 4 chỉ số */
+            margin: 0;
+            /* bỏ nếu này dùng padding 4 chỉ số */
+        }
+
+        p {
+            text-align: center;
+            font-size: 20px;
+            margin: 0;
+            background-color: rgb(236, 72, 35);
+            color: rgb(255, 255, 255);
+        }
+
+        .blue {
+            color: blue;
+            text-align: right;
+        }
+
+        .orange {
+            color: rgb(236, 72, 35);
+        }
+
+        #demo {
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <form method="get">
+        <table>
+            <tr>
+                <td colspan="4"><p>SỞ THÍCH CỦA BẠN</p></td>
+            </tr>
+            <tr>
+                <td class="blue"><label for="name">Họ và tên</label></td>
+                <td colspan="3"><input type="text" name="name" id="name" size="35"></td>
+            </tr>
+            <tr>
+                <td class="blue"><label for="email">Email</label></td>
+                <td colspan="3"><input type="text" name="email" id="email" size="25"></td>
+            </tr>
+            <tr>
+                <td id="demo" rowspan="3" class="blue">Sở thích</td>
+                <td class="orange"><label><input type="checkbox" name="hobby"> Thể thao</label></td>
+                <td class="orange"><label><input type="checkbox" name="hobby"> Âm nhạc</label></td>
+                <td class="orange"><label><input type="checkbox" name="hobby"> Đọc sách</label></td>
+            </tr>
+            <tr>
+                <!-- <td></td> -->
+                <td class="orange"><label><input type="checkbox" name="hobby"> Lướt web</label></td>
+                <td class="orange"><label><input type="checkbox" name="hobby"> Chơi game</label></td>
+                <td class="orange"><label><input type="checkbox" name="hobby"> Điện ảnh</label></td>
+            </tr>
+            <tr>
+                <!-- <td></td> -->
+                <td class="orange"><label><input type="checkbox" name="hobby"> Du lịch</label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="3">
+                    <button type="submit">Gửi thông tin</button>
+                    <button type="reset">Nhập lại</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

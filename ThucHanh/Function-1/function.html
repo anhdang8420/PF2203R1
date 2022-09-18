@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //hàm không tham số, không return
+        function display1() {
+            let num1 = 100;
+            let num2 = 200;
+            document.write(num1 + num2);
+        }
+        document.write("Hàm không tham số, không return: ")
+        display1();
+        document.write("<br>")
+
+
+        //hàm có tham số, không return
+        function display2(num1, num2) {
+            document.write(num1 + num2);
+        }
+        document.write("Hàm có tham số, không return: ")
+        display2(100, 500)
+        document.write("<br>")
+
+
+        //hàm không tham số, có return
+        function display3() {
+            let num1 = 100;
+            let num2 = 200;
+            return num1 + num2;
+        }
+        let total = display3();
+        document.write("Hàm không tham số, có return: " + total);
+        document.write("<br>")
+
+        //hàm có tham số, có return
+        function display4(num1, num2) {
+            return num1 + num2;
+        }
+        let total1 = display4(90, 20);
+        document.write("Hàm có tham số, có return: " + total1);
+    </script>
+</body>
+
+</html>

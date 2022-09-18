@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //hàm prompt luôn trả về giá trị dạng chữ: dạng string
+    //cần cẩn thận khi dùng prompt với toán tử +
+    // let num1 = prompt()
+    // let num2 = prompt()
+    // console.log(num1 + num2)
+    // console.log(num1 * num2)
+
+    //chuyển giá trị prompt về số
+    // let number = +prompt()
+    // // lấy phần nguyên của số
+    // number = parseInt(number)   //=> let number = parseInt(prompt())
+    // // chuyển giá trị về thành số
+    // number = parseFloat(number)
+    // // sử dụng dấu cộng để ngầm gán thành số
+    // number = +number
+    //sử dụng lớp Number trong Js
+    // number = Number(number)
+    // console.log(number + 1);
+
+    //lớp Math trong JS: cung cấp các hàm để thao tác toán học dễ hơn
+    //google: hàm là gì? tìm hiểu về OOP
+    let r = +prompt()
+    console.log(2 * r * Math.PI)
+    console.log(2 * r * 3.14)
+    console.log(r * r * Math.PI)
+    console.log(r**2 * Math.PI)
+    //toFixed(): làm tròn số thập phân
+    console.log((Math.pow(r, 2) * Math.PI).toFixed(6))
+</script>
+</html>

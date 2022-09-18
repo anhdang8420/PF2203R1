@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //cú pháp khai báo mảng
+    //cách 1: sử dụng trực tiếp với ngoặc vuông
+    let demo = ["CodeGym", 4]
+    console.log(demo);
+    //truy xuất phần tử thứ 1, có INDEX bằng 0
+    console.log(demo[0])
+    //truy xuất phần tử thứ 2, có INDEX bằng 1
+    console.log(demo[1])
+    //cách 2: sử dụng lớp Array, thông qua từ khóa new
+    console.log("-----------")
+    let demo1 = new Array()
+    console.log(demo1.length)
+    demo1[0] = "a"
+    demo1[1] = "b"
+    demo1[2] = "c"
+    //mảng trong Js không cố định
+    demo1[1000] = "d"
+    console.log(demo1)
+    console.log(demo1.length)
+
+    //sử dụng new không chính thống
+    let demo2 = new Array(1,2,3,4)
+    console.log(demo2)
+
+
+    //duyệt mảng: sử dụng for
+    //tên mảng.length: trả về độ dài của mảng, số lượng phần tử trong mảng
+    console.log("-----------")
+    for (let i = 0; i < demo2.length; i++) {
+        console.log(demo2[i])
+    }
+</script>
+</html>

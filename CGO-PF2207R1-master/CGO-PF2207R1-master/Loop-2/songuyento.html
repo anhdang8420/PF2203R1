@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // số nguyên tố cơ bản, không dùng hàm
+    let result = "20 số nguyên tố đâu tiên là: "
+    let count = 0
+    let num = 0
+    while(count < 20) {
+        let check = true
+        if (num < 2) {
+           check = false
+        } else {
+            for(let i = 2; i < num; i++) {
+                if(num % i === 0) {
+                    check = false
+                    break
+                }
+            }
+        } 
+        if (check) {
+            result += num +", "
+            count++
+        }
+        num++
+    }
+    document.write(result + "<br>")
+
+    //số nguyên tố dùng hàm
+    function isPrime(N) {
+        if (N < 2) {
+           return false
+        } else {
+            for(let i = 2; i < N; i++) {
+                if(N % i === 0) {
+                    return false
+                }
+            } 
+        } 
+        return true
+    }
+
+    function display20Prime() {
+        let result = "20 số nguyên tố đâu tiên là: "
+        let count = 0
+        let num = 0
+        while(count < 20) {
+            if(isPrime(num)) {
+                result += num +", "
+                count++
+            }
+            num++
+        }
+        document.write(result)
+    }
+
+    display20Prime()
+</script>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 200px;
+            height: 180px;
+            text-align: center;
+        }
+
+        td {
+            width: 40px;
+            height: 30px
+        }
+    </style>
+</head>
+<body>
+    <h1>Caro</h1>
+    <div id="board"></div>
+    <br>
+    <button onclick="init()">Display</button>
+    <!-- <button onclick="player()">Play</button> -->
+    <!-- <button onclick="player1()">Player 1 (o)</button>
+    <button onclick="player2()">Player 2 (x)</button> -->
+</body>
+<script>
+    let arr
+    let value = "o"
+
+    function init() { 
+        let size = 6
+        arr = new Array(size)
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = new Array(size)
+            for(let j = 0; j < arr[i].length; j++) {
+                arr[i][j] = ""
+            }
+        }
+        play()
+    }
+
+    function play() {
+        let data = "<table border='1'>"
+        for (let i = 0; i < arr.length; i++) {
+            data += "<tr>"
+            for(let j = 0; j < arr[i].length; j++) {
+                data += "<td id='" + ("" + i + j ) +"' onclick='playGame(" + i + "," + j + ")'>" 
+                    + arr[i][j] +"</td>"
+            }
+            data += "</tr>"
+        }
+        data += "</table>"
+        // console.log(data);
+        document.getElementById("board").innerHTML = data
+    }
+
+    function playGame(row, col) {
+        if (arr[row][col] === "") {
+            arr[row][col] = value
+            let id = "" + row + col
+            document.getElementById(id).innerHTML = value
+            if (value === "o") {
+                value = "x"
+            } else {
+                value = "o"
+            }
+            // console.log(arr)
+            play()
+        } else {
+            alert("Vị trí này đã được đánh")
+        }
+    }
+
+    //cách chơi dùng 1 nút nhập liệu
+    function player() {
+        let row = +prompt("Nhập vào vị trí hàng muốn đánh: ")
+        let col = +prompt("Nhập vào vị trí cột muốn đánh: ")
+        if (row > arr.length - 1 || col > arr.length - 1) {
+            alert("Không tồn tại vị trí cho chỉ số này")
+        }
+        arr[row][col] = value
+        if (value === "o") {
+            value = "x"
+        } else {
+            value = "o"
+        }
+        play()
+    }
+
+    //cách chơi dùng 2 nút nhập liệu cho 2 người chơi
+    function player1() {
+        let row = +prompt("Nhập vào vị trí hàng muốn đánh: ")
+        let col = +prompt("Nhập vào vị trí cột muốn đánh: ")
+        if (row > arr.length - 1 || col > arr.length - 1) {
+            alert("Không tồn tại vị trí cho chỉ số này")
+        }
+        arr[row][col] = "o"
+        play()
+    }
+
+    function player2() {
+        let row = +prompt("Nhập vào vị trí hàng muốn đánh: ")
+        let col = +prompt("Nhập vào vị trí cột muốn đánh: ")
+        if (row > arr.length - 1 || col > arr.length - 1) {
+            alert("Không tồn tại vị trí cho chỉ số này")
+        }
+        arr[row][col] = "x"
+        play()
+    }
+</script>
+</html>

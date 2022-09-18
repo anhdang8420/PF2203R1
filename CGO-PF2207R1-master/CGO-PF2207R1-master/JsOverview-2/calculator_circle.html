@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculator Circle</h1>
+    <!-- oninput: dùng gọi hàm khi có tác động trên thẻ input -->
+    <input type="text" id="input" oninput="calculatorCircle()">
+    <h2 id="peri"></h2>
+    <h2 id="area"></h2>
+    <button onclick="calculatorCircle()">Click</button>
+</body>
+<script>
+    function calculatorCircle() {
+        let r = document.getElementById("input").value 
+        let perimeter = 2 * r * Math.PI
+        let area = Math.pow(r, 2) * Math.PI
+        document.getElementById("peri").innerHTML = "Chu vi hình tròn là: " + perimeter.toFixed(3)
+        document.getElementById("area").innerHTML = "Diện tích hình tròn là: " + area.toFixed(3)
+    }
+</script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="playGame()">Chơi</button>
+</body>
+<script>
+    console.log(Math.random());
+    function playGame() {
+        let num1 = +prompt("Nhập vào giá trị dưới: ")
+        let num2 = +prompt("Nhập vào giá trị trên: ")
+        let resultNum
+        if (num1 < num2) {
+            //hàm random() của Math trả về kết quả là 1 số trong khoảng 0 => 1
+            resultNum = parseInt(Math.random() * (num2 - num1) + num1)
+        } else if (num1 > num2) {
+            resultNum = parseInt(Math.random() * (num1 - num2) + num2)
+        } else {
+            resultNum = num1
+        }
+        console.log(resultNum);
+        let count = 0
+        do {
+            let guessNum = +prompt("Mời đoán số")
+            if (guessNum < resultNum && count < 3) {
+                alert("Đoán tăng lên!")
+                count++
+            } else if (guessNum > resultNum && count < 3) {
+                alert("Đoán giảm xuống!")
+                count++
+            } else if(count < 3) {
+                alert("You win")
+                break
+            }  
+            if (count === 3) {
+                alert("You lose")
+                break
+            } 
+        } while(true)
+    }
+</script>
+</html>

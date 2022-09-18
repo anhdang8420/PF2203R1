@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="createButton()">ClickMe</button>
+    <button onclick="display()">Demo</button>
+    <div id="div" style="color: red;"></div>
+</body>
+<script>
+    function createButton() {
+        let but = document.createElement("h1")
+        but.innerHTML = "Click"
+        document.body.appendChild(but) 
+
+        let but1 = document.createElement("h1")
+        but1.innerHTML = "PF2207R1"
+        but1.setAttribute("id", "demo")
+        let div = document.getElementById("div")
+        div.appendChild(but1)
+    }
+
+    function display() {
+        let result = document.getElementById("demo").innerHTML
+        console.log(result);
+    }
+</script>
+</html>

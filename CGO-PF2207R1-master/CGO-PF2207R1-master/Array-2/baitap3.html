@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body align="center">
+    <h1>Typing Anything Slowly</h1>
+    <textarea id="input" cols="30" rows="10" onkeydown="typing()"></textarea>
+</body>
+<script>
+    function typing() {
+        let arr = ["C", "O", "D", "E", "G", "Y", "M", "O", "N", "L", "I", "N", "E"]
+        let input = document.getElementById("input").value
+        let data = ""
+        if (input.length > 0) {
+            for(let i = 0; i < input.length; i++) {
+                data += arr[i]
+                if (i === arr.length) {
+                    input.value = ""
+                    data = ""
+                }
+            } 
+        }
+        document.getElementById("input").value = data
+       
+        //setTimeout(): là 1 callback function, hàm gọi lại
+        //cho phép gọi lặp đi lặp lại 1 hàm nào đó theo 1 khoảng thời gian nhất định, tg tính bằng miliseconds
+        setTimeout(typing, 1)
+    }
+
+</script>
+</html>
