@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        div {
+            width: 60%;
+            height: 80%;
+            margin: auto;
+            display: grid;
+            justify-items: center;
+            align-content: center;
+            grid-row: auto;
+            background-color: rgb(43, 87, 87);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Giá hoa quả</h1>
+        <input type="text" id="name">
+        <br>
+        <button type="submit" onclick="seenPrice()">Xem giá</button>
+        <h2 id="result"></h2>
+    </div>
+
+</body>
+<script>
+    function seenPrice() {
+        let name = document.getElementById("name").value;
+        name = name.toLowerCase()
+
+        switch (name) {
+            case "ổi":
+            case "dưa hấu":
+                document.getElementById("result").innerHTML = "10000 VND/kg";
+                break;
+            case "táo":
+            case "xoài":
+                document.getElementById("result").innerHTML = "20000 VND/kg";
+                break;
+            case "chôm chôm":
+                document.getElementById("result").innerHTML = "40000 VND/kg";
+                break;
+            default:
+                document.getElementById("result").innerHTML = "Không tìm thấy!";
+        }
+        document.getElementById('result').style.color = 'blueviolet';
+
+    }
+</script>
+
+</html>
