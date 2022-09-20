@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        div {
+            width: 60%;
+            height: 80%;
+            margin: auto;
+            display: grid;
+            justify-items: center;
+            align-content: center;
+            grid-row: auto;
+            background-color: rgb(117, 148, 148);
+            font-style: italic;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Tính điểm ĐH khối D</h1>
+        <table>
+            <tr>
+                <td>Môn Toán</td>
+                <td>
+                    <input type="text" id="math">
+                </td>
+            </tr>
+            <tr>
+                <td>Môn Văn</td>
+                <td>
+                    <input type="text" id="literature">
+                </td>
+            </tr>
+            <tr>
+                <td>Môn Anh</td>
+                <td>
+                    <input type="text" id="english">
+                </td>
+            </tr>
+            <tr>
+                <td>Khu vực</td>
+                <td>
+                    <select name="area" id="area">
+                        <option value="0.75">KV1</option>
+                        <option value="0.5">KV2</option>
+                        <option value="0.25">KV2-NT</option>
+                        <option value="0">KV3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit" onclick="calculate()"> Tính điểm </button>
+                </td>
+            </tr>
+        </table>
+        <h1 id="result"></h1>
+    </div>
+
+</body>
+<script>
+    function calculate() {
+        let math = +document.getElementById('math').value;
+        let lite = +document.getElementById('literature').value;
+        let eng = +document.getElementById('english').value;
+        let area = +document.getElementById('area').value;
+        let total = math + lite + eng + area;
+        document.getElementById('result').innerHTML = "Tổng điểm ĐH khối D của bạn là: " + total;
+        document.getElementById('result').style.color = 'red';
+    }
+</script>
+
+</html>
