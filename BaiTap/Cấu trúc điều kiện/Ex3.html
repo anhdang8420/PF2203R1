@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Nhập tháng: <input type="text" id="month"> </p>
+    <p>Nhập năm: <input type="text" id="year"> </p>
+    <button onclick="check()">Kiểm tra</button>
+    <p id="result"></p>
+</body>
+<script>
+    function check() {
+        let month = document.getElementById('month').value;
+        let year = document.getElementById('year').value;
+
+        if (month == 2) {
+            if ((year % 4 == 0) & (year % 100 != 0)) {
+                document.getElementById('result').innerHTML = 'Tháng 2 có 29 ngày';
+            }
+            else {
+                document.getElementById('result').innerHTML = 'Tháng 2 có 28 ngày';
+
+            }
+        }
+        else {
+            if (month == 1 || month == 3 || month == 5 || month==7 || month==8 || month==10 || month==12)
+            {
+                document.getElementById('result').innerHTML = 'Tháng có 31 ngày';
+
+            }
+            else{
+                document.getElementById('result').innerHTML = 'Tháng có 30 ngày';
+
+            }
+
+        }
+    }
+
+
+
+</script>
+
+</html>
