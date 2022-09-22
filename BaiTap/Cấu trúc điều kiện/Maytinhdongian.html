@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <input type="text" id="so1">
+    <input type="text" id="so2">
+    <br>
+    <br>
+    <input type="button" value="ADD" onclick="add()">
+    <input type="button" value="SUB" onclick="sub()">
+    <input type="button" value="MUL" onclick="multi()">
+    <input type="button" value="DIV" onclick="div()">
+    <p id="result">Result: </p>
+</body>
+<script>
+    function add() {
+        let so1 = parseInt(document.getElementById("so1").value)
+        let so2 = parseInt(document.getElementById("so2").value)
+        let result = so1 + so2
+        document.getElementById("result").innerText = "Result Add: " + result
+    }
+
+    function sub() {
+        let so1 = parseInt(document.getElementById("so1").value)
+        let so2 = parseInt(document.getElementById("so2").value)
+        let result = so1 - so2
+        document.getElementById("result").innerText = "Result Sub: " + result
+    }
+
+    function multi() {
+        let so1 = parseInt(document.getElementById("so1").value)
+        let so2 = parseInt(document.getElementById("so2").value)
+        let result = so1 * so2
+        document.getElementById("result").innerText = "Result Multi: " + result
+    }
+
+    function div() {
+        let so1 = parseInt(document.getElementById("so1").value)
+        let so2 = parseInt(document.getElementById("so2").value)
+        let result = so1 / so2
+        document.getElementById("result").innerText = "Result Div: " + result
+    }
+</script>
+
+</html>
